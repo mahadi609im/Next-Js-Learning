@@ -1,5 +1,5 @@
 API Link:
 
 ```bash
-[bun dev](https://taxi-kitchen-api.vercel.app/)
+https://taxi-kitchen-api.vercel.app/
 ```
