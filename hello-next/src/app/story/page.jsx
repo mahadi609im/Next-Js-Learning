@@ -75,7 +75,7 @@ const Story = () => {
     <div className="px-4 py-8">
       <Title>Story Page</Title>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+      <div className="grid grid-cols-3 gap-5">
         {devStory.map(item => (
           <StoryCard key={item.id} story={item}></StoryCard>
         ))}

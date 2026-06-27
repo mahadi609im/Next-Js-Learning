@@ -2,6 +2,7 @@ import React from 'react';
 
 const StoryDetails = async ({ params }) => {
   const { id } = await params;
+
   const devStory = [
     {
       id: 1,
@@ -70,13 +71,10 @@ const StoryDetails = async ({ params }) => {
     },
   ];
 
-  const story = devStory.find(story => story.id === parseInt(id));
+  const story = devStory.find(el => el.id === parseInt(id));
 
-  if (!story) {
-    return <h3>Story not found</h3>;
-  }
   return (
-    <div className="max-w-3xl mx-auto shadow-md rounded-lg p-6 border border-gray-200">
+    <div className="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-6 border border-gray-200">
       {/* Top Section */}
       <div className="flex items-center gap-5">
         <img
