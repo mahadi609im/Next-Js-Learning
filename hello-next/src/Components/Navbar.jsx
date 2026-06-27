@@ -1,10 +1,19 @@
+'use client';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import Navlink from './Navlink';
 
 const Navbar = () => {
-  // Navigation links array to keep code DRY (Don't Repeat Yourself)
+  const pathName = usePathname();
+  let dashboard = pathName.startsWith('/dashboard');
+  if (dashboard) {
+    return <></>;
+  }
+
   const navLinks = [
     { name: 'About', path: '/about' },
     { name: 'story', path: '/story' },
+    { name: 'Tutorials', path: '/tutorials' },
     { name: 'Contact', path: '/about/contact' },
     { name: 'Terms', path: '/about/terms' },
   ];
@@ -20,13 +29,13 @@ const Navbar = () => {
 
         <nav className="flex space-x-6">
           {navLinks.map(link => (
-            <Link
+            <Navlink
               key={link.path}
               href={link.path}
               className="text-sm font-medium hover:text-blue-400 transition-colors"
             >
               {link.name}
-            </Link>
+            </Navlink>
           ))}
         </nav>
       </div>
