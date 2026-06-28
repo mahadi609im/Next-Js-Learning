@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/Components/Navbar';
+import CartContextProvider from '@/context/CartContextProvider';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -27,7 +28,9 @@ export default function RootLayout({ children }) {
         <header>
           <Navbar></Navbar>
         </header>
-        <main className="p-6">{children}</main>
+        <main className="p-6">
+          <CartContextProvider>{children}</CartContextProvider>
+        </main>
         <footer></footer>
       </body>
     </html>

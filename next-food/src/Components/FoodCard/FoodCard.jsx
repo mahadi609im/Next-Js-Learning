@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import AddToCartBtn from '../buttons/AddToCartBtn';
 
 const FoodCard = ({ food }) => {
   return (
@@ -34,9 +35,7 @@ const FoodCard = ({ food }) => {
         </Link>
 
         {/* Add to Cart Button */}
-        <button className="flex-[2] py-2 bg-[#E63900] text-white rounded-lg border border-[#E63900] hover:bg-[#CC3200] transition-colors duration-300 font-medium text-sm">
-          Add to Cart
-        </button>
+        <AddToCartBtn food={food}></AddToCartBtn>
       </div>
     </div>
   );

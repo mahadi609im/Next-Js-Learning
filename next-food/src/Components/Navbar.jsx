@@ -34,10 +34,10 @@ const Navbar = () => {
           Foods
         </Navlinks>
         <Navlinks
-          href="/meal-plans"
+          href="/reviews"
           className="hover:text-[#FF8C00] transition-colors duration-200"
         >
-          Meal Plans
+          Reviews
         </Navlinks>
         <Navlinks
           href="/about"
