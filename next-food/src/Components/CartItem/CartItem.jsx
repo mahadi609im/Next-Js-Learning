@@ -13,7 +13,7 @@ const CartItem = () => {
       </h2>
 
       {cart.length === 0 ? (
-        <p className="text-neutral-500 text-sm">Your cart is empty.</p>
+        <p className="text-neutral-500 text-sm">Your cart is empty..</p>
       ) : (
         <ul className="space-y-4">
           {cart.map(item => (
