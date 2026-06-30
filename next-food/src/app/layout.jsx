@@ -1,15 +1,25 @@
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Geist, Geist_Mono, Open_Sans, Poppins } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/Components/Navbar';
 import CartContextProvider from '@/context/CartContextProvider';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+// const geistSans = Geist({
+//   variable: '--font-geist-sans',
+//   subsets: ['latin'],
+// });
+
+// const geistMono = Geist_Mono({
+//   variable: '--font-geist-mono',
+//   subsets: ['latin'],
+// });
+
+const poppins = Poppins({
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
+export const openSans = Open_Sans({
+  weight: ['400', '500', '600', '700'],
   subsets: ['latin'],
 });
 
@@ -35,11 +45,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
+    <html lang="en" className={` h-full antialiased`}>
+      <body className={`${poppins.className} min-h-full flex flex-col`}>
         <header>
           <Navbar></Navbar>
         </header>

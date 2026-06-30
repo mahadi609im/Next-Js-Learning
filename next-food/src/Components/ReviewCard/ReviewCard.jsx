@@ -1,4 +1,5 @@
 import { Heart, Star } from 'lucide-react';
+import Image from 'next/image';
 import React, { useState } from 'react';
 
 const ReviewCard = ({ review }) => {
@@ -22,9 +23,11 @@ const ReviewCard = ({ review }) => {
     <div className="bg-[#111111] border border-neutral-800 rounded-2xl p-6 transition-all duration-300 hover:border-[#FF8C00]/30 hover:shadow-[0_0_15px_rgba(255,140,0,0.05)]">
       {/* Header: User Info */}
       <div className="flex items-center gap-4 mb-4">
-        <img
+        <Image
           src={review?.photo || '/default-avatar.png'}
           alt={review?.user}
+          width={48}
+          height={48}
           className="w-12 h-12 rounded-full border border-neutral-700 object-cover"
         />
         <div>

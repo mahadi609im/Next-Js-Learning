@@ -3,6 +3,7 @@ import FoodCard from '@/Components/FoodCard/FoodCard';
 import SearchFood from '@/Components/SearchFood';
 import { Search } from 'lucide-react';
 import React from 'react';
+import { openSans } from '../layout';
 
 export function generateStaticParams() {
   return [{ id: '52894' }, { id: '52872' }];
@@ -28,7 +29,7 @@ const Foods = async ({ searchParams }) => {
   return (
     <div>
       <div className="flex flex-col items-center mb-8 gap-4">
-        <h2 className="font-bold text-2xl">
+        <h2 className={`${openSans.className} font-bold text-2xl`}>
           Foods: <span className="text-orange-400">{foods.length}</span>
         </h2>
 

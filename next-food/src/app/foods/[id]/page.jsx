@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 export async function generateMetadata({ params }) {
@@ -33,7 +34,7 @@ const FoodDetails = async ({ params }) => {
         <div className="relative group">
           <div className="absolute inset-0 bg-[#E63900] opacity-20 blur-[80px] rounded-full"></div>
           <div className="relative rounded-3xl overflow-hidden border border-neutral-800 shadow-2xl">
-            <img
+            <Image
               src={food.foodImg}
               alt={food.title}
               width={600}
