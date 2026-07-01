@@ -2,6 +2,7 @@
 import { CartContext } from '@/context/CartContextProvider';
 import React, { useContext } from 'react';
 import { Trash2 } from 'lucide-react'; // Optional: for remove button
+import Image from 'next/image';
 
 const CartItem = () => {
   const { cart, removeFromCart } = useContext(CartContext); // Assuming you have a removeFromCart function
@@ -19,9 +20,11 @@ const CartItem = () => {
           {cart.map(item => (
             <li key={item.id} className="flex items-center gap-4">
               {/* Thumbnail */}
-              <img
+              <Image
                 src={item.foodImg}
                 alt={item.title}
+                width={64}
+                height={64}
                 className="w-16 h-16 rounded-lg object-cover border border-neutral-800"
               />
 

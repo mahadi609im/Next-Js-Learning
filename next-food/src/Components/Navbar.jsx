@@ -16,6 +16,7 @@ const Navbar = () => {
           width={50}
           height={50}
           className="drop-shadow-[0_0_8px_rgba(230,57,0,0.3)]"
+          loading="eager"
         />
       </Link>
 
